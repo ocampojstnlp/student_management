@@ -29,7 +29,16 @@ class App {
             }
         }
 
+        #print_r($URL);
+
+        $URL = array_values($URL);
+
+        #print_r($URL);
+
+        $this->params = $URL;
+
         echo call_user_func_array([$this->controller, $this->method], $this->params);
+
 
     }
 
