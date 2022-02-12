@@ -7,8 +7,6 @@ class App {
     protected $params = array();
 
     function __construct() {
-        // echo $this->getURL();]
-        
         
         $URL = $this->getURL();
 
@@ -23,17 +21,20 @@ class App {
 
         // Checks if method is existing
         if (isset($URL[1])) {
+
             if (method_exists($this->controller, $URL[1])) {
+
                 $this->method = ucfirst($URL[1]);
+
                 unset($URL[1]);
+               
             }
+            
         }
 
         #print_r($URL);
 
         $URL = array_values($URL);
-
-        #print_r($URL);
 
         $this->params = $URL;
 
@@ -43,7 +44,6 @@ class App {
     }
 
     private function getURL() {
-        echo '<pre>';
 
         $url = isset($_GET['url']) ? $_GET['url'] : 'home' ;
         

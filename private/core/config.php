@@ -1,3 +1,3 @@
 <?php 
 
-echo "from config";
+define('ROOT', 'http://localhost/school/public/');
