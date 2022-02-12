@@ -7,8 +7,6 @@ class App {
     protected $params = array();
 
     function __construct() {
-        // echo $this->getURL();]
-        
         
         $URL = $this->getURL();
 
