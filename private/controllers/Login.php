@@ -1,6 +1,6 @@
 <?php  
 
-class Home extends Controller{
+class Login extends Controller{
 
     function __construct() {
         
@@ -8,7 +8,7 @@ class Home extends Controller{
 
     public function index($id = '') {
         
-       $this->view('home');
+       $this->view('login');
 
     }
 }

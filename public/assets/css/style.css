@@ -1,0 +1,13 @@
+.has-form i.fa.fa-user {
+    font-size: 110px;
+}
+.has-form span.container-iterate.border.border-primary {
+    display: inline-flex;
+    height: 135px;
+    width: 135px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border-width: 7px!important;
+}
+

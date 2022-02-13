@@ -12,16 +12,18 @@ class Controller {
         
         if (file_exists('../private/views/' . $view . '.view.php')) {
            #return  file_get_contents('../private/views/' . $view . '.view.php');
+           
+           require '../private/views/' . $view . '.view.php';
 
-            ob_start();
-                include('../private/views/' . $view . '.view.php');
-                $output = ob_get_contents();
-            ob_end_clean();
+            // ob_start();
+            //     include('../private/views/' . $view . '.view.php');
+            //     $output = ob_get_contents();
+            // ob_end_clean();
         
-            return $output;
+            // return $output;
 
         } else {
-            return file_get_contents('../private/views/' . '404' . '.view.php');
+            require '../private/views/' . '404' . '.view.php';
         }
     }
 
