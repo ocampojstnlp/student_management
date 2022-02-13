@@ -6,22 +6,25 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link text-white" href="#">DASHBOARD</span></a>
+        <a class="nav-link text-white" href="<?= ROOT ?>">DASHBOARD</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">CLASSES</a>
+        <a class="nav-link text-white" href="<?= ROOT ?>users">USERS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">TESTS</a>
+        <a class="nav-link text-white" href="<?= ROOT ?>classes">CLASSES</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="<?= ROOT ?>tests">TESTS</a>
       </li>
       <li class="nav-item dropdown ">
         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           USER
         </a>
         <div class="dropdown-menu text-white" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Profile</a>
-          <a class="dropdown-item" href="#">Dashboard</a>
-          <a class="dropdown-item" href="#">Log out</a>
+          <a class="dropdown-item" href="<?= ROOT ?>profile">Profile</a>
+          <a class="dropdown-item" href="<?= ROOT ?>">Dashboard</a>
+          <a class="dropdown-item" href="<?= ROOT ?>logout">Log out</a>
         </div>
       </li>
     </ul>

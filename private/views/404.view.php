@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body class="<?= explode('.', basename(__FILE__, '.php'))[0]; ?>"> 
     <h1>Page not found</h1>
 </body>
 </html>
