@@ -13,3 +13,7 @@ require 'config.php';
 require 'controller.php';
 
 $app = new App();
+
+
+$conn = new Database();
+
