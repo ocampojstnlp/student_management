@@ -48,6 +48,6 @@
             <button class="btn btn-danger float-start text-white">Cancel</button>
         </div>
     </div>
-</div>
+</div> 
 
 <?php $this->view('includes/footer') ?>
