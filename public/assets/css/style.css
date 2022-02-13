@@ -1,0 +1,42 @@
+.has-form i.fa.fa-user {
+    font-size: 110px;
+}
+.has-form span.container-iterate.border.border-primary {
+    display: inline-flex;
+    height: 135px;
+    width: 135px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border-width: 7px!important;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.profile .col-sm-3 img {
+    max-width: 130px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* .profile .row > * {
+   padding: unset;
+} */
+
+/* @media(max-width: 767px) {
+    .profile .col-4 img {
+        max-width: 150px;
+    }
+    .profile .row {
+        flex-direction: column;
+    }
+
+    .profile .row > * {
+        width: 100%;
+        max-width: unset;
+    }
+} */
