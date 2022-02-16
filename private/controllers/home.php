@@ -7,8 +7,23 @@ class Home extends Controller{
     }
 
     public function index($id = '') {
-        
-       $this->view('home');
+        // $db = new Database();
+        // $data = $db->query('SELECT * FROM users WHERE firstname = ?;', ['john']);    
+
+        // $db = new Database();
+
+        // $data = $db->query('SELECT * FROM users WHERE firstname = ?;', ['john']);
+
+
+        $db = new Database();
+        $data = $db->query('SELECT * FROM users WHERE firstname = ?', ['jane']);
+
+
+        // foreach($datas as $data) {
+        //     echo $data->firstname .' ' . $data->lastname . '<br>';
+        // }
+
+        $this->view('home', ['rows' => $data]);
 
     }
 }
