@@ -16,7 +16,7 @@ class Home extends Controller{
 
 
         $db = new Database();
-        $data = $db->query('SELECT * FROM users WHERE firstname = ?', ['jane']);
+        $data = $db->query('SELECT * FROM users;');
 
 
         // foreach($datas as $data) {

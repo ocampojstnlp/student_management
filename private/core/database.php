@@ -2,18 +2,36 @@
 
 class Database {
     private function connect() {
-        $string = 'mysql:host=localhost;dbname=school_db';
-        if (!$con = new PDO($string, 'root', '')) {
-            die('Cound\'t connect to the database');
+        // The Data Source Name, or DSN, contains the information required to connect to the database. In general, a DSN consists of the PDO driver name, followed by a colon, followed by the PDO driver-specific connection syntax.
+        // $string = DBDRIVER.':host='. DBHOST .';dbname='. DBNAME;
+        // if (!$con = new PDO($string, DBUSER, DBPASS)) {
+        //     die('Cound\'t connect to the database');
+        // }
+        // return $con;
+        
+        $string = DBDRIVER . ':host='. DBHOST .';dbname=' . DBNAME;
+        
+        if (!$con = new PDO($string, DBUSER, DBPASS)) {
+            die('nothing');
         }
+
         return $con;
     }
 
-    public function run($query, $data = array(), $data_type = 'object') {
+
+
+
+    public function query($query, $data = array(), $data_type = 'object') {
         $con = $this->connect();
         $stm = $con->prepare($query);
+
+
         if ($stm) {
             $check = $stm->execute($data);
+
+
+
+
             if ($check) {
                 if ($data_type == 'object') {
                     $data = $stm->fetchAll(PDO::FETCH_OBJ);
@@ -26,13 +44,14 @@ class Database {
                 }
 
             }
+
+
+
         }
-        return false;
-    }
-
-
-    public function query() {
 
     }
+
+
 
 }
+
