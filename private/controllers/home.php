@@ -7,22 +7,21 @@ class Home extends Controller{
     }
 
     public function index($id = '') {
-        // $db = new Database();
-        // $data = $db->query('SELECT * FROM users WHERE firstname = ?;', ['john']);    
+        // $user = $this->load_model('user');
+        $user = new User();
 
-        // $db = new Database();
+        $arr['firstname'] = 'Tester firstname';
+        $arr['lastname'] = 'SameTest1';
+        $arr['date'] = '0000-00-00 00:00:00';
+        $arr['user_id'] = '1asdasd';
+        $arr['gender'] = 'male';
+        $arr['school_id'] = '1234';
+        $arr['rank'] = 'student';
 
-        // $data = $db->query('SELECT * FROM users WHERE firstname = ?;', ['john']);
+        $user->insert($arr);
 
-
-        $db = new Database();
-        $data = $db->query('SELECT * FROM users;');
-
-
-        // foreach($datas as $data) {
-        //     echo $data->firstname .' ' . $data->lastname . '<br>';
-        // }
-
+        $data = $user->findAll();
+        // $data = $user->where('lastname', 'Zein');
         $this->view('home', ['rows' => $data]);
 
     }

@@ -29,9 +29,6 @@ class Database {
         if ($stm) {
             $check = $stm->execute($data);
 
-
-
-
             if ($check) {
                 if ($data_type == 'object') {
                     $data = $stm->fetchAll(PDO::FETCH_OBJ);

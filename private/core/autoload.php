@@ -11,6 +11,12 @@ require 'config.php';
 
 #controller
 require 'controller.php';
+#Model
+require 'Model.php';
+
+spl_autoload_register(function ($class) {
+    require '../private/models/' . $class . '.php';
+});
 
 $app = new App();
 
